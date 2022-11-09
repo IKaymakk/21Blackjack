@@ -1165,7 +1165,7 @@ namespace blackjack21
                                         Console.Write("  Tur Berabere" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamxxx3 > eltoplamxxx)
+                                    if (kasatoplamxxx3 > eltoplamxxx && kasatoplamxxx3 < 21)
                                     {
                                         Console.Write("  Kasa Kazandı" + "\n"); tur++;
 
