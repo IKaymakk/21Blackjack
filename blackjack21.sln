@@ -1,25 +1,2507 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blackjack21", "blackjack21\blackjack21.csproj", "{6B37537D-3A28-4BF3-9691-B84E8A80BB3C}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6B37537D-3A28-4BF3-9691-B84E8A80BB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B37537D-3A28-4BF3-9691-B84E8A80BB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B37537D-3A28-4BF3-9691-B84E8A80BB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B37537D-3A28-4BF3-9691-B84E8A80BB3C}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {33D95C76-7268-48F8-9642-0A76FF0D4666}
-	EndGlobalSection
-EndGlobal
+using System.Runtime.CompilerServices;
+
+namespace blackjack21
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "21 BLACKJACK";
+            Console.BackgroundColor=ConsoleColor.Cyan; Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+            Console.WriteLine();
+            Thread.Sleep(1000);
+            Console.Write("\t\t\t\t\t" + "     B");
+            Thread.Sleep(65);
+            Console.Write("l");
+            Thread.Sleep(65);
+            Console.Write("a");
+            Thread.Sleep(65);
+            Console.Write("c");
+            Thread.Sleep(65);
+            Console.Write("k");
+            Thread.Sleep(65);
+            Console.Write("j");
+            Thread.Sleep(65);
+            Console.Write("a");
+            Thread.Sleep(65);
+            Console.Write("c");
+            Thread.Sleep(65);
+            Console.Write("k'");
+            Thread.Sleep(65);
+            Console.Write("e");
+            Thread.Sleep(65);
+            Console.Write("  H");
+            Thread.Sleep(65);
+            Console.Write("o");
+            Thread.Sleep(65);
+            Console.Write("ş");
+            Thread.Sleep(65);
+            Console.Write(" ");
+            Thread.Sleep(65);
+            Console.Write("G");
+            Thread.Sleep(65);
+            Console.Write("e");
+            Thread.Sleep(65);
+            Console.Write("l");
+            Thread.Sleep(65);
+            Console.Write("d");
+            Thread.Sleep(65);
+            Console.Write("i");
+            Thread.Sleep(65);
+            Console.Write("n");
+            Thread.Sleep(65);
+            Console.Write("i");
+            Thread.Sleep(65);
+            Console.Write("z");
+            Thread.Sleep(500);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("\t\t\t\t" + "  Seçtiğiniz Miktarda 5 Tur Oynayacaksınız");
+            Console.WriteLine("\t\t\t\t" + "  Kazandığınız Tur Başına Bahisinizin 1.5 Katı," );
+            Console.WriteLine("\t\t\t\t" + "  Kaybettiğiniz Tur Başına Bahis Miktarı Hesapta İşlenir");
+            Console.WriteLine("\t\t\t\t" + "  Tur Berabere İse Paranız Geri Ödenir.");
+            Console.WriteLine("\t\t\t\t" + "  Kart Sayı Toplamlarınız 21'i Geçerse Turu Kaybedersiniz." );
+            Console.WriteLine("\t\t\t\t" + "  Kart Adetiniz 5 Olursa Otomatik Olarak Turu Kazanırsınız.");
+            Console.WriteLine("\t\t\t\t" + "  El Sonunda Kart Sayılarının Toplamı 21'E Yakın Olan Kazanır." +"\n");
+            Console.WriteLine("\t\t\t\t" + "                 Devam İçin Enter."+"\n");
+
+            Random rnd = new Random();
+            int el1 = rnd.Next(1, 11);
+            int el2 = rnd.Next(1, 11);
+            int el3 = rnd.Next(1, 11);
+            int eltoplam = el1 + el2 + el3;
+            ///           
+            Console.ReadLine();
+            int sayac = 0;
+            int tur = 1;
+            //Console.Write("  İsim : ");
+            //string isim = Convert.ToString(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("  Bahis Miktarı : ");
+            int bahis = Convert.ToInt32(Console.ReadLine());
+            int bahiskari = bahis / 2 + bahis;
+            Console.WriteLine();
+            Console.WriteLine("\t\t\t\t\t" + "     Başlamak İçin Entera Basınız" + "\n");
+            Console.ReadLine();
+
+            Console.Write("  Oyun Yükleniyor ");
+
+            for (int j = 0; j < 7; j++)
+            {
+                Console.Write(".");
+                Thread.Sleep(500);
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            if (sayac == 0)
+            {
+                for (int i = 0; i < 60; i++)
+                {
+                    Thread.Sleep(20);
+                    Console.Write("* ");
+                  ;
+                }
+                Console.WriteLine();
+            }
+            
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Thread.Sleep(300);
+            Console.Write("\t\t\t\t\t\t\t" + "T");
+            Thread.Sleep(300);
+            Console.Write("u");
+            Thread.Sleep(300);
+            Console.Write("r");
+            Thread.Sleep(500);
+            Console.Write(" 1");
+            Console.WriteLine();
+            Console.WriteLine(); Console.WriteLine();
+
+        
+            if (sayac == 0)
+            {
+                int kasa1 = rnd.Next(1, 11);
+                int kasakapali = rnd.Next(1, 11);
+                int kasa2 = rnd.Next(1, 11);
+                Thread.Sleep(1000);
+
+                Console.Write("  Kasanın İlk Kartı =" + kasa1 + "\n");
+                Thread.Sleep(1000);
+                Console.Write("  Kasanın İkinci Kartı = Kapalı " + "\n");
+                Thread.Sleep(300);
+
+
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Oyuncunun İlk Kartı =" + el1 + "\n");
+                Thread.Sleep(1300);
+                Console.Write("  Oyuncunun İkinci Kartı =" + el2 + "\n");
+                Thread.Sleep(1000);
+
+                Console.WriteLine();
+                Console.Write("\t\t\t\t\t\t" + "1 - Kart Çek || 0 - Dur ");
+                string kararx = Convert.ToString(Console.ReadLine());
+
+                if (kararx == "1")
+                {
+                    Thread.Sleep(1000);
+                    Console.Write("  Oyuncunun 3. Kartı =" + el3 + "\n");
+                    Thread.Sleep(700);
+                    int eltoplamxx = el1 + el2 + el3;
+
+                    if (eltoplamxx > 21)
+                    {
+                        Console.WriteLine("  Kasa Kazandı");
+                        tur++;
+                        sayac++;
+                    }
+                    else if (eltoplamxx == 21)
+                    {
+                        Console.Write("  Oyuncu Kazandı" + "\n");
+                        tur++;
+                        sayac++;
+                    }
+                    else if (eltoplamxx < 21)
+                    {
+                        Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                        int karar2 = Convert.ToInt32(Console.ReadLine());
+                        if (karar2 == 0)
+                        {
+                            Console.WriteLine();
+                            Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                            Thread.Sleep(1000);
+                            Console.Write(kasakapali + "\n");
+                            int kasatoplamx = kasa1 + kasakapali;
+                            if (kasatoplamx == eltoplam)
+                            {
+                                Console.Write("  Tur Berabere" + "\n");
+                                tur++;
+                            }
+                            if (kasatoplamx > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamx < 21 && kasatoplamx > eltoplam)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            if (kasatoplamx < 21 && kasatoplamx < eltoplam)
+                            {
+                                Thread.Sleep(700);
+                                Console.Write("  Kasanın 3. Kartı = ");
+                                Thread.Sleep(700);
+                                Console.Write(kasa2 + "\n");
+                                int kasatoplamx2 = kasa1 + kasakapali + kasa2;
+                                if (kasatoplamx2 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx2 == 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx2 < 21 && kasatoplamx2 > eltoplam)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx2 == eltoplam)
+                                {
+                                    Console.Write("  Tur Berabere" + "\n");
+                                    tur++;
+                                }
+                                if (kasatoplamx2 < 21 && kasatoplamx2 < eltoplam)
+                                {
+                                    int kasax3 = rnd.Next(1, 11);
+                                    Console.Write("  Kasanın 4. Kartı = ");
+                                    Thread.Sleep(700);
+                                    Console.Write(kasax3 + "\n");
+                                    int kasatoplamx3 = kasa1 + kasakapali + kasa2 + kasax3;
+                                    if (kasatoplamx3 == 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+                                    }
+                                    if (kasatoplamx3 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamx3 == eltoplam)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamx3 < 21 && kasatoplamx3 > eltoplam)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamx3 < 21 && kasatoplamx3 < eltoplam)
+                                    {
+                                        int kasa4 = rnd.Next(1, 11);
+                                        Console.Write("  Kasanın 5. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasax3 + "\n");
+                                        int kasatoplamx4 = kasa1 + kasakapali + kasa2 + kasax3 + kasa4;
+                                        if (kasatoplamx4 < 21)
+                                        {
+                                            Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if (kasatoplamx4 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if(kasatoplamx4 == 21)
+                                        {
+                                            Console.WriteLine("  Kasa Kazandı"+"\n");
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                        if (karar2 == 1)
+                        {
+                            int el4 = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Oyuncunun 4. Kartı = ");
+                            Thread.Sleep(700);
+                            Console.Write(el4 + "\n");
+                            int eltoplam4 = el1 + el2 + el3 + el4;
+                            if (eltoplam4 > 21)
+                            {
+                                Console.WriteLine("  Kasa Kazandı");
+                                tur++;
+                            }
+                            else if (eltoplam4 == 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (eltoplam4 < 21)
+                            {
+                                Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                                int karar22 = Convert.ToInt32(Console.ReadLine());
+                                if (karar22 == 1)
+                                {
+                                    int el5 = rnd.Next(1, 11);
+                                    //Console.Write("  Oyuncunun 5. Kartı = " + el5 + "\n");
+                                    Thread.Sleep(1000);
+
+                                    Console.Write("  Oyuncunun 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(el5 + "\n");
+                                    int eltoplam5 = el1 + el2 + el3 + el4 + el5;
+                                    if (eltoplam5 > 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı");
+                                        tur++;
+                                    }
+                                    else if(eltoplam5 < 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı");
+                                        tur++;
+                                    }
+                                    else if (eltoplam5 == 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı");
+
+                                    }
+                                }
+                                if (karar22 == 0)
+                                {
+                                    Console.WriteLine();
+                                    Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasakapali + "\n");
+                                    int kasatoplam = kasa1 + kasakapali;
+                                    if (kasatoplam == eltoplam4)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplam > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    else if (kasatoplam > eltoplam4)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplam < 21 && kasatoplam < eltoplam4)
+                                    {
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 3. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasa2 + "\n");
+                                        int kasatoplam2 = kasa1 + kasakapali + kasa2;
+                                        if (kasatoplam2 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplam2 < 21 && kasatoplam2 > eltoplam4)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplam2 == eltoplam4)
+                                        {
+                                            Console.Write("  Tur Berabere" + "\n");
+                                            tur++;
+                                        }
+                                        if (kasatoplam2 < 21 && kasatoplam2 < eltoplam4)
+                                        {
+                                            int kasa3 = rnd.Next(1, 11);
+                                            Console.Write("  Kasanın 4. Kartı = ");
+                                            Thread.Sleep(700);
+                                            Console.Write(kasa3 + "\n");
+                                            int kasatoplam3 = kasa1 + kasakapali + kasa2 + kasa3;
+                                            if(kasatoplam3 == 21)
+                                            {
+                                                Console.Write("  Kasa Kazandı" + "\n"); tur++;
+                                            }
+                                            if (kasatoplam3 > 21)
+                                            {
+                                                Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplam3 == eltoplam4)
+                                            {
+                                                Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplam3 < 21 && kasatoplam3 > eltoplam4)
+                                            {
+                                                Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplam3 < 21 && kasatoplam3 < eltoplam4)
+                                            {
+                                                int kasa4 = rnd.Next(1, 11);
+                                                Console.Write("  Kasanın 5. Kartı = ");
+                                                Thread.Sleep(700);
+                                                Console.Write(kasa3 + "\n");
+                                                int kasatoplam4 = kasa1 + kasakapali + kasa2 + kasa3 + kasa4;
+                                                if (kasatoplam4 < 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                                }
+                                                else if (kasatoplam4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                                }
+                                                else if (kasatoplam4 > 21)
+                                                {
+                                                    Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+                                                }
+                                                else if (kasatoplam4 == eltoplam4)
+                                                {
+                                                    Console.Write(" Tur Berabere" + "\n"); tur++;
+                                                    sayac++;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                        sayac++;
+                    }
+                }
+                if (kararx == "0")
+                {
+                    eltoplam = el1 + el2;
+                    int kasatoplam = kasa1 + kasakapali;
+
+                    if (kasatoplam == eltoplam)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapali);
+                        Console.Write("  El Berabere" + "\n"); tur++;
+                    }
+
+                   else if (kasatoplam > eltoplam)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapali + "\n");
+                        Console.Write("  Kasa Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (kasatoplam < eltoplam)
+                    {
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                        Thread.Sleep(1000);
+                        Console.Write(kasakapali + "\n");
+                        if (kasatoplam > eltoplam && kasatoplam < 21)
+                        {
+                            Console.Write("  Kasa Kazandı" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam == eltoplam)
+                        {
+                            Console.Write("  El Berabere" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam > 21)
+                        {
+                            Console.Write("  Oyuncu Kazandı." + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam < 21 || kasatoplam < eltoplam)
+                        {
+                            int kasa3 = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Kasanın 3. Kartı = " + kasa3 + "\n");
+                            int kasatoplamx2 = kasa1 + kasakapali + kasa3;
+                            if (kasatoplamx2 == eltoplam)
+                            {
+                                Console.Write("  El Berabere" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamx2 > eltoplam && kasatoplamx2 < 21)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamx2 > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı." + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamx2 < eltoplam || kasatoplamx2 < 21)
+                            {
+                                int kasa4 = rnd.Next(1, 11);
+                                Thread.Sleep(700);
+                                Console.Write("  Kasanın 4. Kartı = ");
+                                Thread.Sleep(600);
+                                Console.Write(kasa4+"\n");
+                                int kasatoplamx3 = kasa1 + kasakapali + kasa4 + kasa3;
+                                if (kasatoplamx3 == 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                }
+                                if (kasatoplamx3 == eltoplam)
+                                {
+                                    Console.Write("  El Berabere" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > eltoplam && kasatoplamx3 < 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı." + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 < 21)
+                                {
+                                    int kasa5 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasa5 + "\n");
+                                    int kasatoplamx4 = kasa1 + kasakapali + kasa3 + kasa5 + kasa4;
+                                    if (kasatoplamx4 < 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 == 21)
+                                    {
+                                        Console.WriteLine("  Kasa Kazandı"+"\n");
+                                    }
+                                    else if (kasatoplamx4 > eltoplam && kasatoplamx4 < 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                    sayac++;
+                   
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            if (sayac == 1)
+            {
+                for (int i = 0; i < 60; i++)
+                {
+                    Thread.Sleep(20);
+                    Console.Write("* ");
+
+                }
+
+            }
+
+            if (sayac == 1)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+                Thread.Sleep(300);
+                Console.Write("\t\t\t\t\t\t\t" + "T");
+                Thread.Sleep(300);
+                Console.Write("u");
+                Thread.Sleep(300);
+                Console.Write("r");
+                Thread.Sleep(500);
+                Console.Write(" 2"+"\n");
+                Console.WriteLine();
+                Thread.Sleep(1000);
+
+                int kasaxx1 = rnd.Next(1, 11);
+                int kasakapalixx = rnd.Next(1, 11);
+                int kasa2xx = rnd.Next(1, 11);
+
+                int elxx1 = rnd.Next(1, 11);
+                int elxx2 = rnd.Next(1, 11);
+                int elxx3 = rnd.Next(1, 11);
+                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Kasanın İlk Kartı =" + kasaxx1 + "\n");
+                Thread.Sleep(1000);
+                Console.Write("  Kasanın İkinci Kartı = Kapalı " + "\n");
+                Thread.Sleep(1000);
+
+
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Oyuncunun İlk Kartı =" + elxx1 + "\n");
+                Thread.Sleep(1300);
+                Console.Write("  Oyuncunun İkinci Kartı =" + elxx2 + "\n");
+                Thread.Sleep(1000);
+
+                Console.WriteLine();
+                Console.Write("\t\t\t\t\t\t" + "1 - Kart Çek || 0 - Dur ");
+                string kararx1 = Convert.ToString(Console.ReadLine());
+                if (kararx1 == "1")
+                {
+                    Thread.Sleep(1000);
+                    Console.Write("  Oyuncunun 3. Kartı =" + elxx3 + "\n");
+                    Thread.Sleep(700);
+                    eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                    if (eltoplamxxx > 21)
+                    {
+                        Console.WriteLine("  Kasa Kazandı");
+                        tur++;
+                    }
+                    else if (eltoplamxxx == 21)
+                    {
+                        Console.Write("  Oyuncu Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (eltoplamxxx < 21)
+                    {
+                        Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                        int kararx2 = Convert.ToInt32(Console.ReadLine());
+                        if (kararx2 == 0)
+                        {
+                            Console.WriteLine();
+                            Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                            Thread.Sleep(1000);
+                            Console.Write(kasakapalixx + "\n");
+                            int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                            if (kasatoplamxxx == eltoplamxxx)
+                            {
+                                Console.Write("  Tur Berabere" + "\n");
+                                tur++;
+                                sayac++;
+                            }
+                            if (kasatoplamxxx > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                                sayac++;
+                            }
+                            else if (kasatoplamxxx < 21 && kasatoplamxxx > eltoplamxxx)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                                sayac++;
+                            }
+                            if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxxx)
+                            {
+                                Thread.Sleep(700);
+                                Console.Write("  Kasanın 3. Kartı = ");
+                                Thread.Sleep(700);
+                                Console.Write(kasa2xx + "\n");
+                                int kasatoplamxxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                               
+                                if (kasatoplamxxx2 == 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+
+                                }
+                                if (kasatoplamxxx2 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 < 21 && kasatoplamxxx2 > eltoplamxxx)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 == eltoplamxxx)
+                                {
+                                    Console.Write("  Tur Berabere" + "\n");
+                                    tur++;
+                                }
+                                if (kasatoplamxxx2 < 21 && kasatoplamxxx2 < eltoplamxxx)
+                                {
+                                    int kasaxx3 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 4. Kartı = ");
+                                    Thread.Sleep(700);
+                                    Console.Write(kasaxx3 + "\n");
+                                    int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3;
+                                    if (kasatoplamxxx3 == 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+                                    }
+                                    if (kasatoplamxxx3 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 == eltoplamxxx)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplamxxx)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplamxxx)
+                                    {
+                                        int kasaxx4 = rnd.Next(1, 11);
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 5. Kartı = ");
+                                        Thread.Sleep(1000);
+                                        Console.Write(kasaxx3 + "\n");
+                                        int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3 + kasaxx4;
+                                        if(kasatoplamxx4 < 21)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if(kasatoplamxx4 == 21)
+                                        {
+                                            Console.WriteLine("  Tur Berabere"+"\n");tur++;
+                                        }
+                                        else if (kasatoplamxx4 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+                                        }
+                                    }
+                                    sayac++;
+                                }
+                            }
+
+                        }
+                        if (kararx2 == 1)
+                        {
+                            int elxx4 = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Oyuncunun 4. Kartı = ");
+                            Thread.Sleep(700);
+                            Console.Write(elxx4 + "\n");
+                            int eltoplamxx4 = elxx1 + elxx2 + elxx3 + elxx4;
+                            if (eltoplamxx4 > 21)
+                            {
+                                Console.WriteLine("  Kasa Kazandı");
+                                tur++;
+                            }
+                            else if (eltoplamxx4 == 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (eltoplamxxx < 21)
+                            {
+                                Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                                int kararxx22 = Convert.ToInt32(Console.ReadLine());
+                                if (kararxx22 == 1)
+                                {
+                                    int elxx5 = rnd.Next(1, 11);
+                                    //Console.Write("  Oyuncunun 5. Kartı = " + elxx5 + "\n");
+                                    Thread.Sleep(1000);
+                                    Console.Write("  Oyuncunun 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(elxx5 + "\n");
+
+                                    int eltoplamxx5 = elxx1 + elxx2 + elxx3 + elxx4 + elxx5;
+                                    if (eltoplamxx5 > 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı");
+                                        tur++;
+                                        sayac++;
+                                    }
+                                    else if (eltoplamxx5 < 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı");
+                                        tur++;
+                                        sayac++;
+                                    }
+                                    else if (eltoplamxx5 == 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n");
+
+                                    }
+
+                                }
+                                if (kararxx22 == 0)
+                                {
+                                    Console.WriteLine();
+                                    Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasakapalixx + "\n");
+                                    int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                                    if (kasatoplamxxx == eltoplamxx4)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    else if (kasatoplamxxx > eltoplamxx4)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxx4)
+                                    {
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 3. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasa2xx + "\n");
+                                        int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                                        if (kasatoplamxx2 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 < 21 && kasatoplamxx2 > eltoplamxx4)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 == eltoplamxx4)
+                                        {
+                                            Console.Write("  Tur Berabere" + "\n");
+                                            tur++;
+                                        }
+                                        if (kasatoplamxx2 < 21 && kasatoplamxx2 < eltoplamxx4)
+                                        {
+                                            int kasaxxx3 = rnd.Next(1, 11);
+                                            Console.Write("  Kasanın 4. Kartı = ");
+                                            Thread.Sleep(700);
+                                            Console.Write(kasaxxx3 + "\n");
+                                            int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3;
+                                            if (kasatoplamxxx3 > 21)
+                                            {
+                                                Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 == eltoplamxx4)
+                                            {
+                                                Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplamxx4)
+                                            {
+                                                Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplamxx4)
+                                            {
+                                                int kasaxxx4 = rnd.Next(1, 11);
+                                                Console.Write("  Kasanın 5. Kartı = ");
+                                                Thread.Sleep(700);
+                                                Console.Write(kasaxxx3 + "\n");
+                                                int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3 + kasaxxx4;
+                                                if (kasatoplamxx4 < 21)
+                                                {
+                                                    Console.WriteLine("  Kasa Kazandı" + "\n"); tur++;
+                                                }
+                                                if (kasatoplamxx4 < 21 && kasatoplamxx4 > eltoplamxx4)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                                }
+                                                if (kasatoplamxx4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                                }
+                                                if (kasatoplamxx4 > 21)
+                                                {
+                                                    Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    sayac++;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                if (kararx1 == "0")
+                {
+                    eltoplamxxx = elxx1 + elxx2;
+                    int kasatoplam = kasaxx1 + kasakapalixx;
+                    if (kasatoplam == eltoplamxxx)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapalixx+"\n");
+                        Console.Write("  El Berabere" + "\n"); tur++;
+                    }
+                    else if (kasatoplam > eltoplamxxx)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapalixx + "\n");
+                        Thread.Sleep(1000);
+                        Console.Write("  Kasa Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (kasatoplam < eltoplamxxx)
+                    {
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                        Thread.Sleep(1000);
+                        Console.Write(kasakapalixx + "\n");
+                        if (kasatoplam > eltoplamxxx && kasatoplam < 21)
+                        {
+                            Console.Write("  Kasa Kazandı" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam == eltoplamxxx)
+                        {
+                            Console.Write("  El Berabere" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam > 21)
+                        {
+                            Console.Write("  Oyuncu Kazandı." + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam < 21 || kasatoplam < eltoplamxxx)
+                        {
+                            int kasa3xx = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Kasanın 3. Kartı = " + kasa3xx + "\n");
+                            int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa3xx;
+                            if (kasatoplamxx2 == eltoplamxxx)
+                            {
+                                Console.Write("  El Berabere" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > eltoplamxxx && kasatoplamxx2 < 21)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı." + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 < eltoplamxxx || kasatoplamxx2 < 21)
+                            {
+                                int kasaxx4 = rnd.Next(1, 11);
+                                Thread.Sleep(1000);
+                                Console.Write("  Kasanın 4. Kartı = ");
+                                Thread.Sleep(500);
+                                Console.WriteLine(kasaxx4);
+                                int kasatoplamx3 = kasaxx1 + kasakapalixx + kasaxx4 + kasa3xx;
+                                if (kasatoplamx3 == 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                }
+                                if (kasatoplamx3 == eltoplamxxx)
+                                {
+                                    Console.Write("  El Berabere" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > eltoplamxxx && kasatoplamx3 < 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı." + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 < 21)
+                                {
+                                    int kasaxx5 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasaxx5 + "\n");
+                                    int kasatoplamx4 = kasaxx1 + kasakapalixx + kasa3xx + kasaxx5 + kasaxx4;
+                                    if (kasatoplamx4 < 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if(kasatoplamx4 == 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > eltoplamxxx && kasatoplamx4 < 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    sayac++;
+                  
+                }
+            }
+            sayac++;
+            Console.WriteLine();
+            Console.WriteLine();
+            int ixi = 1;
+            if (ixi == 1) 
+            {
+                for (int i = 0; i < 60; i++)
+                {
+                    Thread.Sleep(20);
+                    Console.Write("* ");
+                }
+            }
+
+            if (ixi == 1) 
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+                Thread.Sleep(300);
+                Console.Write("\t\t\t\t\t\t\t" + "T");
+                Thread.Sleep(300);
+                Console.Write("u");
+                Thread.Sleep(300);
+                Console.Write("r");
+                Thread.Sleep(500);
+                Console.Write(" 3"+"\n");
+                Console.WriteLine();
+                Thread.Sleep(1000);
+
+                int kasaxx1 = rnd.Next(1, 11);
+                int kasakapalixx = rnd.Next(1, 11);
+                int kasa2xx = rnd.Next(1, 11);
+
+                int elxx1 = rnd.Next(1, 11);
+                int elxx2 = rnd.Next(1, 11);
+                int elxx3 = rnd.Next(1, 11);
+                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Kasanın İlk Kartı =" + kasaxx1 + "\n");
+                Thread.Sleep(2000);
+                Console.Write("  Kasanın İkinci Kartı = Kapalı " + "\n");
+                Thread.Sleep(1000);
+
+
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Oyuncunun İlk Kartı =" + elxx1 + "\n");
+                Thread.Sleep(2000);
+                Console.Write("  Oyuncunun İkinci Kartı =" + elxx2 + "\n");
+                Thread.Sleep(1000);
+
+                Console.WriteLine();
+                Console.Write("\t\t\t\t\t\t" + "1 - Kart Çek || 0 - Dur ");
+                string kararx1 = Convert.ToString(Console.ReadLine());
+                if (kararx1 == "1")
+                {
+                    Thread.Sleep(1000);
+                    Console.Write("  Oyuncunun 3. Kartı =" + elxx3 + "\n");
+                    Thread.Sleep(700);
+                    eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                    if (eltoplamxxx > 21)
+                    {
+                        Console.WriteLine("  Kasa Kazandı");
+                        tur++;
+                    }
+                    else if (eltoplamxxx == 21)
+                    {
+                        Console.Write("  Oyuncu Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (eltoplamxxx < 21)
+                    {
+                        Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                        int kararx2 = Convert.ToInt32(Console.ReadLine());
+                        if (kararx2 == 0)
+                        {
+                            Console.WriteLine();
+                            Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                            Thread.Sleep(1000);
+                            Console.Write(kasakapalixx + "\n");
+                            int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                            if (kasatoplamxxx == eltoplamxxx)
+                            {
+                                Console.Write("  Tur Berabere" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxxx == 21)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+
+                            }
+
+                            else if (kasatoplamxxx > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxxx < 21 && kasatoplamxxx > eltoplamxxx)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxxx)
+                            {
+                                Thread.Sleep(700);
+                                Console.Write("  Kasanın 3. Kartı = ");
+                                Thread.Sleep(700);
+                                Console.Write(kasa2xx + "\n");
+                                int kasatoplamxxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                                if (kasatoplamxxx2 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if(kasatoplamxxx2 == 21)
+                                {
+                                    Console.WriteLine("  Kasa Kazandı"+"\n");
+                                }
+                                else if (kasatoplamxxx2 < 21 && kasatoplamxxx2 > eltoplamxxx)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 == eltoplamxxx)
+                                {
+                                    Console.Write("  Tur Berabere" + "\n");
+                                    tur++;
+                                }
+                                if (kasatoplamxxx2 < 21 && kasatoplamxxx2 < eltoplamxxx)
+                                {
+                                    int kasaxx3 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 4. Kartı = ");
+                                    Thread.Sleep(700);
+                                    Console.Write(kasaxx3 + "\n");
+                                    int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3;
+                                    if (kasatoplamxxx3 == 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+                                    }
+                                    if (kasatoplamxxx3 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 == eltoplam)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 > eltoplamxxx)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 < eltoplamxxx)
+                                    {
+                                        int kasaxx4 = rnd.Next(1, 11);
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 5. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasaxx3 + "\n");
+                                        int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3 + kasaxx4;
+                                        if (kasatoplamxx4 < 21 )
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if (kasatoplamxx4 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if(kasatoplamxx4 == 21)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (kararx2 == 1)
+                        {
+                            int elxx4 = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Oyuncunun 4. Kartı = ");
+                            Thread.Sleep(700);
+                            Console.Write(elxx4 + "\n");
+                            int eltoplamxx4 = elxx1 + elxx2 + elxx3 + elxx4;
+                            if (eltoplamxx4 > 21)
+                            {
+                                Console.WriteLine("  Kasa Kazandı");
+                                tur++;
+                            }
+                            else if (eltoplamxx4 == 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (eltoplamxx4 < 21)
+                            {
+                                Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                                int kararxx22 = Convert.ToInt32(Console.ReadLine());
+                                if (kararxx22 == 1)
+                                {
+                                    int elxx5 = rnd.Next(1, 11);
+                                    //Console.Write("  Oyuncunun 5. Kartı = " + elxx5 + "\n");
+                                    Thread.Sleep(1000);
+                                    Console.Write("  Oyuncunun 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(elxx5 + "\n");
+
+                                    int eltoplamxx5 = elxx1 + elxx2 + elxx3 + elxx4 + elxx5;
+                                    if (eltoplamxx5 > 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı");
+                                        tur++;
+                                    }
+                                    if (eltoplamxx5 < 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı");
+                                        tur++;
+                                    }
+                                }
+                                if (kararxx22 == 0)
+                                {
+                                    Console.WriteLine();
+                                    Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasakapalixx + "\n");
+                                    int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                                    if (kasatoplamxxx == eltoplamxx4)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    else if (kasatoplamxxx > eltoplamxx4)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxx4)
+                                    {
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 3. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasa2xx + "\n");
+                                        int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                                        if (kasatoplamxx2 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if(kasatoplamxx2 == 21)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 < 21 && kasatoplamxx2 > eltoplamxx4)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 == eltoplamxx4)
+                                        {
+                                            Console.Write("  Tur Berabere" + "\n");
+                                            tur++;
+                                        }
+                                        if (kasatoplamxx2 < 21 && kasatoplamxx2 < eltoplamxx4)
+                                        {
+                                            int kasaxxx3 = rnd.Next(1, 11);
+                                            Console.Write("  Kasanın 4. Kartı = ");
+                                            Thread.Sleep(700);
+                                            Console.Write(kasaxxx3 + "\n");
+                                            int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3;
+                                            if (kasatoplamxxx3 > 21)
+                                            {
+                                                Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 == eltoplamxx4)
+                                            {
+                                                Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplamxx4)
+                                            {
+                                                Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplamxx4)
+                                            {
+                                                int kasaxxx4 = rnd.Next(1, 11);
+                                                Console.Write("  Kasanın 5. Kartı = ");
+                                                Thread.Sleep(700);
+                                                Console.Write(kasaxxx3 + "\n");
+                                                int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3 + kasaxxx4;
+                                                if (kasatoplamxx4 < 21 && kasatoplamxx4 > eltoplamxx4 || kasatoplamxx4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                                }
+                                                if (kasatoplamxx4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                                }
+                                                if (kasatoplamxx4 > 21)
+                                                {
+                                                    Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (kararx1 == "0")
+                {
+                    eltoplamxxx = elxx1 + elxx2;
+                    int kasatoplam = kasaxx1 + kasakapalixx;
+                    if (kasatoplam > eltoplamxxx)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapalixx + "\n");
+                        Thread.Sleep(1000);
+                        Console.Write("  Kasa Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if(kasatoplam == eltoplamxxx)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapalixx + "\n");
+                        Console.Write("  Tur Berabere" + "\n");
+                        tur++;
+                    }
+                    else if (kasatoplam < eltoplamxxx)
+                    {
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                        Thread.Sleep(1000);
+                        Console.Write(kasakapalixx + "\n");
+                        if (kasatoplam > eltoplamxxx && kasatoplam < 21)
+                        {
+                            Console.Write("  Kasa Kazandı" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam == eltoplamxxx)
+                        {
+                            Console.Write("  El Berabere" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam > 21)
+                        {
+                            Console.Write("  Oyuncu Kazandı." + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam < 21 || kasatoplam < eltoplamxxx)
+                        {
+                            int kasa3xx = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Kasanın 3. Kartı = " + kasa3xx + "\n");
+                            int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa3xx;
+                            if (kasatoplamxx2 == eltoplamxxx)
+                            {
+                                Console.Write("  El Berabere" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > eltoplamxxx && kasatoplamxx2 < 21)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı." + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 < eltoplamxxx || kasatoplamxx2 < 21)
+                            {
+                                int kasaxx4 = rnd.Next(1, 11);
+                                Thread.Sleep(1000);
+                                Console.Write("  Kasanın 4. Kartı = ");
+                                Thread.Sleep(500);
+                                Console.WriteLine(kasaxx4);
+                                int kasatoplamx3 = kasaxx1 + kasakapalixx + kasaxx4 + kasa3xx;
+                                if (kasatoplamx3 == 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                }
+                                if (kasatoplamx3 == eltoplamxxx)
+                                {
+                                    Console.Write("  El Berabere" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > eltoplamxxx && kasatoplamx3 < 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı." + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 < 21)
+                                {
+                                    int kasaxx5 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasaxx5 + "\n");
+                                    int kasatoplamx4 = kasaxx1 + kasakapalixx + kasa3xx + kasaxx5 + kasaxx4;
+                                    if (kasatoplamx4 < 21 || kasatoplamx4 == 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > eltoplamxxx && kasatoplamx4 < 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    sayac++;
+                    
+                }
+               
+            }
+            Console.WriteLine();
+
+            if (ixi == 1)
+            {
+                for (int i = 0; i < 60; i++)
+                {
+                    Thread.Sleep(20);
+                    Console.Write("* ");
+                }
+            }
+            if (ixi == 1)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+                Thread.Sleep(300);
+                Console.Write("\t\t\t\t\t\t\t" + "T");
+                Thread.Sleep(300);
+                Console.Write("u");
+                Thread.Sleep(300);
+                Console.Write("r");
+                Thread.Sleep(500);
+                Console.Write(" 4" + "\n");            
+                Thread.Sleep(1000);
+
+                int kasaxx1 = rnd.Next(1, 11);
+                int kasakapalixx = rnd.Next(1, 11);
+                int kasa2xx = rnd.Next(1, 11);
+
+                int elxx1 = rnd.Next(1, 11);
+                int elxx2 = rnd.Next(1, 11);
+                int elxx3 = rnd.Next(1, 11);
+                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Kasanın İlk Kartı =" + kasaxx1 + "\n");
+                Thread.Sleep(2000);
+                Console.Write("  Kasanın İkinci Kartı = Kapalı " + "\n");
+                Thread.Sleep(1000);
+
+
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Oyuncunun İlk Kartı =" + elxx1 + "\n");
+                Thread.Sleep(2000);
+                Console.Write("  Oyuncunun İkinci Kartı =" + elxx2 + "\n");
+                Thread.Sleep(1000);
+
+                Console.WriteLine();
+                Console.Write("\t\t\t\t\t\t" + "1 - Kart Çek || 0 - Dur ");
+                string kararx1 = Convert.ToString(Console.ReadLine());
+                if (kararx1 == "1")
+                {
+                    Thread.Sleep(1000);
+                    Console.Write("  Oyuncunun 3. Kartı =" + elxx3 + "\n");
+                    Thread.Sleep(700);
+                    eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                    if (eltoplamxxx > 21)
+                    {
+                        Console.WriteLine("  Kasa Kazandı");
+                        tur++;
+                    }
+                    else if (eltoplamxxx == 21)
+                    {
+                        Console.Write("  Oyuncu Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (eltoplamxxx < 21)
+                    {
+                        Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                        int kararx2 = Convert.ToInt32(Console.ReadLine());
+                        if (kararx2 == 0)
+                        {
+                            Console.WriteLine();
+                            Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                            Thread.Sleep(1000);
+                            Console.Write(kasakapalixx + "\n");
+                            int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                            if (kasatoplamxxx == eltoplamxxx)
+                            {
+                                Console.Write("  Tur Berabere" + "\n");
+                                tur++;
+                            }
+                            if (kasatoplamxxx > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxxx < 21 && kasatoplamxxx > eltoplamxxx)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxxx)
+                            {
+                                Thread.Sleep(700);
+                                Console.Write("  Kasanın 3. Kartı = ");
+                                Thread.Sleep(700);
+                                Console.Write(kasa2xx + "\n");
+                                int kasatoplamxxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                                if (kasatoplamxxx2 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 < 21 && kasatoplamxxx2 > eltoplamxxx)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 == eltoplamxxx)
+                                {
+                                    Console.Write("  Tur Berabere" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 == 21)
+                                {
+                                    Console.WriteLine("  Kasa Kazandı"+"\n");
+                                }
+                                if (kasatoplamxxx2 < 21 && kasatoplamxxx2 < eltoplamxxx)
+                                {
+                                    int kasaxx3 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 4. Kartı = ");
+                                    Thread.Sleep(700);
+                                    Console.Write(kasaxx3 + "\n");
+                                    int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3;
+                                    if (kasatoplamxxx3 == 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+                                    }
+                                    if (kasatoplamxxx3 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 == eltoplam)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplam)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplam)
+                                    {
+                                        int kasaxx4 = rnd.Next(1, 11);
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 5. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasaxx3 + "\n");
+                                        int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3 + kasaxx4;
+                                        if(kasatoplamxx4 < 21)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if (kasatoplamxx4 == 21)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if (kasatoplamxx4 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (kararx2 == 1)
+                        {
+                            int elxx4 = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Oyuncunun 4. Kartı = ");
+                            Thread.Sleep(700);
+                            Console.Write(elxx4 + "\n");
+                            int eltoplamxx4 = elxx1 + elxx2 + elxx3 + elxx4;
+                            if (eltoplamxx4 > 21)
+                            {
+                                Console.WriteLine("  Kasa Kazandı");
+                                tur++;
+                            }
+                            else if (eltoplamxx4 == 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (eltoplamxx4 < 21)
+                            {
+                                Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                                int kararxx22 = Convert.ToInt32(Console.ReadLine());
+                                if (kararxx22 == 1)
+                                {
+                                    int elxx5 = rnd.Next(1, 11);
+                                    //Console.Write("  Oyuncunun 5. Kartı = " + elxx5 + "\n");
+                                    Thread.Sleep(1000);
+                                    Console.Write("  Oyuncunun 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(elxx5 + "\n");
+
+                                    int eltoplamxx5 = elxx1 + elxx2 + elxx3 + elxx4 + elxx5;
+                                    if (eltoplamxx5 > 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı");
+                                        tur++;
+                                    }
+                                    if (eltoplamxx5 < 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı");
+                                        tur++;
+                                    }
+                                }
+                                if (kararxx22 == 0)
+                                {
+                                    Console.WriteLine();
+                                    Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasakapalixx + "\n");
+                                    int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                                    if (kasatoplamxxx == eltoplamxx4)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    else if (kasatoplamxxx > eltoplamxx4)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxx4)
+                                    {
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 3. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasa2xx + "\n");
+                                        int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                                        if (kasatoplamxx2 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 < 21 && kasatoplamxx2 > eltoplamxx4)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 == eltoplamxx4)
+                                        {
+                                            Console.Write("  Tur Berabere" + "\n");
+                                            tur++;
+                                        }
+                                        if (kasatoplamxx2 < 21 && kasatoplamxx2 < eltoplamxx4)
+                                        {
+                                            int kasaxxx3 = rnd.Next(1, 11);
+                                            Console.Write("  Kasanın 4. Kartı = ");
+                                            Thread.Sleep(700);
+                                            Console.Write(kasaxxx3 + "\n");
+                                            int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3;
+                                            if (kasatoplamxxx3 > 21)
+                                            {
+                                                Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 == eltoplamxx4)
+                                            {
+                                                Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplamxx4)
+                                            {
+                                                Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplamxx4)
+                                            {
+                                                int kasaxxx4 = rnd.Next(1, 11);
+                                                Console.Write("  Kasanın 5. Kartı = ");
+                                                Thread.Sleep(700);
+                                                Console.Write(kasaxxx3 + "\n");
+                                                int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3 + kasaxxx4;
+                                                if (kasatoplamxx4 < 21 && kasatoplamxx4 > eltoplamxx4 || kasatoplamxx4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                                }
+                                                if (kasatoplamxx4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                                }
+                                                if (kasatoplamxx4 > 21)
+                                                {
+                                                    Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (kararx1 == "0")
+                {
+                    eltoplamxxx = elxx1 + elxx2;
+                    int kasatoplam = kasaxx1 + kasakapalixx;
+                    if (kasatoplam > eltoplamxxx)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapalixx + "\n");
+                        Thread.Sleep(1000);
+                        Console.Write("  Kasa Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (kasatoplam < eltoplamxxx)
+                    {
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                        Thread.Sleep(1000);
+                        Console.Write(kasakapalixx + "\n");
+                        if (kasatoplam > eltoplamxxx && kasatoplam < 21)
+                        {
+                            Console.Write("  Kasa Kazandı" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam == eltoplamxxx)
+                        {
+                            Console.Write("  El Berabere" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam > 21)
+                        {
+                            Console.Write("  Oyuncu Kazandı." + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam < 21 || kasatoplam < eltoplamxxx)
+                        {
+                            int kasa3xx = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Kasanın 3. Kartı = " + kasa3xx + "\n");
+                            int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa3xx;
+                            if (kasatoplamxx2 == eltoplamxxx)
+                            {
+                                Console.Write("  El Berabere" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > eltoplamxxx && kasatoplamxx2 < 21)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı." + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 < eltoplamxxx || kasatoplamxx2 < 21)
+                            {
+                                int kasaxx4 = rnd.Next(1, 11);
+                                Thread.Sleep(1000);
+
+                                Console.Write("  Kasanın 4. Kartı = ");
+                                Thread.Sleep(500);
+                                Console.WriteLine(kasaxx4);
+                                int kasatoplamx3 = kasaxx1 + kasakapalixx + kasaxx4 + kasa3xx;
+                                if (kasatoplamx3 == 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                }
+                                if (kasatoplamx3 == eltoplamxxx)
+                                {
+                                    Console.Write("  El Berabere" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > eltoplamxxx && kasatoplamx3 < 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı." + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 < 21)
+                                {
+                                    int kasaxx5 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasaxx5 + "\n");
+                                    int kasatoplamx4 = kasaxx1 + kasakapalixx + kasa3xx + kasaxx5 + kasaxx4;
+                                    if (kasatoplamx4 < 21 || kasatoplamx4 == 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > eltoplamxxx && kasatoplamx4 < 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    sayac++;
+                    
+                }
+            }
+            Console.WriteLine();
+            if (ixi == 1)
+            {
+                for (int i = 0; i < 60; i++)
+                {
+                    Thread.Sleep(20);
+                    Console.Write("* ");
+                }
+            }
+            if (ixi == 1)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+                Thread.Sleep(300);
+                Console.Write("\t\t\t\t\t\t\t" + "T");
+                Thread.Sleep(300);
+                Console.Write("u");
+                Thread.Sleep(300);
+                Console.Write("r");
+                Thread.Sleep(500);
+                Console.Write(" 5" + "\n");
+                Thread.Sleep(1000);
+
+                int kasaxx1 = rnd.Next(1, 11);
+                int kasakapalixx = rnd.Next(1, 11);
+                int kasa2xx = rnd.Next(1, 11);
+
+                int elxx1 = rnd.Next(1, 11);
+                int elxx2 = rnd.Next(1, 11);
+                int elxx3 = rnd.Next(1, 11);
+                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Kasanın İlk Kartı =" + kasaxx1 + "\n");
+                Thread.Sleep(2000);
+                Console.Write("  Kasanın İkinci Kartı = Kapalı " + "\n");
+                Thread.Sleep(1000);
+
+
+
+                Thread.Sleep(1000);
+                Console.WriteLine();
+                Console.Write("  Oyuncunun İlk Kartı =" + elxx1 + "\n");
+                Thread.Sleep(2000);
+                Console.Write("  Oyuncunun İkinci Kartı =" + elxx2 + "\n");
+                Thread.Sleep(1000);
+
+                Console.WriteLine();
+                Console.Write("\t\t\t\t\t\t" + "1 - Kart Çek || 0 - Dur ");
+                string kararx1 = Convert.ToString(Console.ReadLine());
+                if (kararx1 == "1")
+                {
+                    Thread.Sleep(1000);
+                    Console.Write("  Oyuncunun 3. Kartı =" + elxx3 + "\n");
+                    Thread.Sleep(700);
+                    eltoplamxxx = elxx1 + elxx2 + elxx3;
+
+                    if (eltoplamxxx > 21)
+                    {
+                        Console.WriteLine("  Kasa Kazandı"+"\n");
+                        tur++;
+                    }
+                    else if (eltoplamxxx == 21)
+                    {
+                        Console.Write("  Oyuncu Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (eltoplamxxx < 21)
+                    {
+                        Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                        int kararx2 = Convert.ToInt32(Console.ReadLine());
+                        if (kararx2 == 0)
+                        {
+                            Console.WriteLine();
+                            Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                            Thread.Sleep(1000);
+                            Console.Write(kasakapalixx + "\n");
+                            int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                            if (kasatoplamxxx == eltoplamxxx)
+                            {
+                                Console.Write("  Tur Berabere" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxxx == 21)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+
+                            }
+
+                            else if (kasatoplamxxx > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxxx < 21 && kasatoplamxxx > eltoplamxxx)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxxx)
+                            {
+                                Thread.Sleep(700);
+                                Console.Write("  Kasanın 3. Kartı = ");
+                                Thread.Sleep(700);
+                                Console.Write(kasa2xx + "\n");
+                                int kasatoplamxxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                                if (kasatoplamxxx2 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 < 21 && kasatoplamxxx2 > eltoplamxxx)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 == eltoplamxxx)
+                                {
+                                    Console.Write("  Tur Berabere" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamxxx2 == 21)
+                                {
+                                    Console.WriteLine("  Kasa Kazandı" + "\n");
+                                }
+                                if (kasatoplamxxx2 < 21 && kasatoplamxxx2 < eltoplamxxx)
+                                {
+                                    int kasaxx3 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 4. Kartı = ");
+                                    Thread.Sleep(700);
+                                    Console.Write(kasaxx3 + "\n");
+                                    int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3;
+                                    if (kasatoplamxxx3 == 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+                                    }
+                                    if (kasatoplamxxx3 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 == eltoplam)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplam)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplam)
+                                    {
+                                        int kasaxx4 = rnd.Next(1, 11);
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 5. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasaxx3 + "\n");
+                                        int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxx3 + kasaxx4;
+                                        if (kasatoplamxx4 < 21)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if (kasatoplamxx4 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                        }
+                                        else if(kasatoplamxx4 == 21)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n"); tur++;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (kararx2 == 1)
+                        {
+                            int elxx4 = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Oyuncunun 4. Kartı = ");
+                            Thread.Sleep(700);
+                            Console.Write(elxx4 + "\n");
+                            int eltoplamxx4 = elxx1 + elxx2 + elxx3 + elxx4;
+                            if (eltoplamxx4 > 21)
+                            {
+                                Console.WriteLine("  Kasa Kazandı"+"\n");
+                                tur++;
+                            }
+                            else if (eltoplamxx4 == 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (eltoplamxx4 < 21)
+                            {
+                                Console.Write("\t\t\t\t\t\t" + " 1 - Kart Çek || 0 - Dur");
+                                int kararxx22 = Convert.ToInt32(Console.ReadLine());
+                                if (kararxx22 == 1)
+                                {
+                                    int elxx5 = rnd.Next(1, 11);
+                                    //Console.Write("  Oyuncunun 5. Kartı = " + elxx5 + "\n");
+                                    Thread.Sleep(1000);
+                                    Console.Write("  Oyuncunun 5. Kartı = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(elxx5 + "\n");
+
+                                    int eltoplamxx5 = elxx1 + elxx2 + elxx3 + elxx4 + elxx5;
+                                    if (eltoplamxx5 > 21)
+                                    {
+                                        Console.Write("  Kasa Kazandı"+"\n");
+                                        tur++;
+                                    }
+                                    if (eltoplamxx5 < 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı"+"\n");
+                                        tur++;
+                                    }
+                                }
+                                if (kararxx22 == 0)
+                                {
+                                    Console.WriteLine();
+                                    Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                                    Thread.Sleep(1000);
+                                    Console.Write(kasakapalixx + "\n");
+                                    int kasatoplamxxx = kasaxx1 + kasakapalixx;
+                                    if (kasatoplamxxx == eltoplamxx4)
+                                    {
+                                        Console.Write("  Tur Berabere" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    else if (kasatoplamxxx > eltoplamxx4)
+                                    {
+                                        Console.Write("  Kasa Kazandı" + "\n");
+                                        tur++;
+                                    }
+                                    if (kasatoplamxxx < 21 && kasatoplamxxx < eltoplamxx4)
+                                    {
+                                        Thread.Sleep(700);
+                                        Console.Write("  Kasanın 3. Kartı = ");
+                                        Thread.Sleep(700);
+                                        Console.Write(kasa2xx + "\n");
+                                        int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa2xx;
+                                        if (kasatoplamxx2 > 21)
+                                        {
+                                            Console.Write("  Oyuncu Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 == 21)
+                                        {
+                                            Console.WriteLine("  Kasa Kazandı"+"\n");
+                                        }
+                                        else if (kasatoplamxx2 < 21 && kasatoplamxx2 > eltoplamxx4)
+                                        {
+                                            Console.Write("  Kasa Kazandı" + "\n");
+                                            tur++;
+                                        }
+                                        else if (kasatoplamxx2 == eltoplamxx4)
+                                        {
+                                            Console.Write("  Tur Berabere" + "\n");
+                                            tur++;
+                                        }
+                                        if (kasatoplamxx2 < 21 && kasatoplamxx2 < eltoplamxx4)
+                                        {
+                                            int kasaxxx3 = rnd.Next(1, 11);
+                                            Console.Write("  Kasanın 4. Kartı = ");
+                                            Thread.Sleep(700);
+                                            Console.Write(kasaxxx3 + "\n");
+                                            int kasatoplamxxx3 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3;
+                                            if (kasatoplamxxx3 > 21)
+                                            {
+                                                Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 == eltoplamxx4)
+                                            {
+                                                Console.Write("  Tur Berabere" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplamxx4)
+                                            {
+                                                Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                            }
+                                            if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplamxx4)
+                                            {
+                                                int kasaxxx4 = rnd.Next(1, 11);
+                                                Thread.Sleep(600);
+                                                Console.Write("  Kasanın 5. Kartı = ");
+                                                Thread.Sleep(700);
+                                                Console.Write(kasaxxx3 + "\n");
+                                                int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3 + kasaxxx4;
+                                                if (kasatoplamxx4 < 21 && kasatoplamxx4 > eltoplamxx4 || kasatoplamxx4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                                }
+                                                if (kasatoplamxx4 == 21)
+                                                {
+                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                                }
+                                                if (kasatoplamxx4 > 21)
+                                                {
+                                                    Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (kararx1 == "0")
+                {
+                    eltoplamxxx = elxx1 + elxx2;
+                    int kasatoplam = kasaxx1 + kasakapalixx;
+                    if(kasatoplam == eltoplamxxx)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapalixx + "\n");
+                        Console.Write("  El Berabere" + "\n");
+                        tur++;
+                    }
+                    else if(kasatoplam == 21)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasa Kazandı" + "\n");
+                    }
+                    else if (kasatoplam > eltoplamxxx)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = " + kasakapalixx + "\n");
+                        Thread.Sleep(1000);
+                        Console.Write("  Kasa Kazandı" + "\n");
+                        tur++;
+                    }
+                    else if (kasatoplam < eltoplamxxx)
+                    {
+                        Console.Write("  Kasanın Kapalı Kartı Açılıyor = ");
+                        Thread.Sleep(1000);
+                        Console.Write(kasakapalixx + "\n");
+                        if (kasatoplam > eltoplamxxx && kasatoplam < 21)
+                        {
+                            Console.Write("  Kasa Kazandı" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam == eltoplamxxx)
+                        {
+                            Console.Write("  El Berabere" + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam > 21)
+                        {
+                            Console.Write("  Oyuncu Kazandı." + "\n");
+                            tur++;
+                        }
+                        else if (kasatoplam < 21 || kasatoplam < eltoplamxxx)
+                        {
+                            int kasa3xx = rnd.Next(1, 11);
+                            Thread.Sleep(1000);
+                            Console.Write("  Kasanın 3. Kartı = " + kasa3xx + "\n");
+                            int kasatoplamxx2 = kasaxx1 + kasakapalixx + kasa3xx;
+                            if (kasatoplamxx2 == eltoplamxxx)
+                            {
+                                Console.Write("  El Berabere" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > eltoplamxxx && kasatoplamxx2 < 21)
+                            {
+                                Console.Write("  Kasa Kazandı" + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 > 21)
+                            {
+                                Console.Write("  Oyuncu Kazandı." + "\n");
+                                tur++;
+                            }
+                            else if (kasatoplamxx2 < eltoplamxxx || kasatoplamxx2 < 21)
+                            {
+                                int kasaxx4 = rnd.Next(1, 11);
+                                Thread.Sleep(1000);
+
+                                Console.Write("  Kasanın 4. Kartı = " + kasaxx4 + "\n");
+                                int kasatoplamx3 = kasaxx1 + kasakapalixx + kasaxx4 + kasa3xx;
+                                if (kasatoplamx3 == 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n"); tur++;
+
+                                }
+                                if (kasatoplamx3 == eltoplamxxx)
+                                {
+                                    Console.Write("  El Berabere" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > eltoplamxxx && kasatoplamx3 < 21)
+                                {
+                                    Console.Write("  Kasa Kazandı" + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 > 21)
+                                {
+                                    Console.Write("  Oyuncu Kazandı." + "\n");
+                                    tur++;
+                                }
+                                else if (kasatoplamx3 < 21)
+                                {
+                                    int kasaxx5 = rnd.Next(1, 11);
+                                    Thread.Sleep(700);
+                                    Console.Write("  Kasanın 5. Kartı = ");
+                                    Console.Write(kasaxx5 + "\n");
+                                    int kasatoplamx4 = kasaxx1 + kasakapalixx + kasa3xx + kasaxx5 + kasaxx4;
+                                    
+                                    if(kasatoplamx4 == 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 < 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > eltoplamxxx && kasatoplamx4 < 21)
+                                    {
+                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+
+                                    }
+                                    else if (kasatoplamx4 > 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    sayac++;
+                }
+            }
+            if (ixi == 1)
+            {
+                for (int i = 0; i < 60; i++)
+                {
+                    Thread.Sleep(20);
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+                Console.WriteLine();
+                for( int a = 1; a < 2 ; a++)
+                {
+                    Console.Write("\t\t\t" + "K");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write("z");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write("n");
+                    Thread.Sleep(20);
+                    Console.Write("d");
+                    Thread.Sleep(20);
+                    Console.Write("ı");
+                    Thread.Sleep(20);
+                    Console.Write("ğ");
+                    Thread.Sleep(20);
+                    Console.Write("ı");
+                    Thread.Sleep(20);
+                    Console.Write("n");
+                    Thread.Sleep(20);
+                    Console.Write("ı");
+                    Thread.Sleep(20);
+                    Console.Write("z");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("T");
+                    Thread.Sleep(20);
+                    Console.Write("u");
+                    Thread.Sleep(20);
+                    Console.Write("r");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("B");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write("ş");
+                    Thread.Sleep(20);
+                    Console.Write("ı");
+                    Thread.Sleep(20);
+                    Console.Write("n");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("{0}",bahiskari);
+                    Thread.Sleep(20);
+                    Console.Write(",");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("K");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write("y");
+                    Thread.Sleep(20);
+                    Console.Write("b");
+                    Thread.Sleep(20);
+                    Console.Write("e");
+                    Thread.Sleep(20);
+                    Console.Write("t");
+                    Thread.Sleep(20);
+                    Console.Write("t");
+                    Thread.Sleep(20);
+                    Console.Write("i");
+                    Thread.Sleep(20);
+                    Console.Write("ğ");
+                    Thread.Sleep(20);
+                    Console.Write("i");
+                    Thread.Sleep(20);
+                    Console.Write("n");
+                    Thread.Sleep(20);
+                    Console.Write("i");
+                    Thread.Sleep(20);
+                    Console.Write("z");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("T");
+                    Thread.Sleep(20);
+                    Console.Write("u");
+                    Thread.Sleep(20);
+                    Console.Write("r");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("B");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write("ş");
+                    Thread.Sleep(20);
+                    Console.Write("ı");
+                    Thread.Sleep(20);
+                    Console.Write("n");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("{0}",bahis);
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("H");
+                    Thread.Sleep(20);
+                    Console.Write("e");
+                    Thread.Sleep(20);
+                    Console.Write("s");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write("b");
+                    Thread.Sleep(20);
+                    Console.Write("ı");
+                    Thread.Sleep(20);
+                    Console.Write("n");
+                    Thread.Sleep(20);
+                    Console.Write("ı");
+                    Thread.Sleep(20);
+                    Console.Write("z");
+                    Thread.Sleep(20);
+                    Console.Write("a");
+                    Thread.Sleep(20);
+                    Console.Write(" ");
+                    Thread.Sleep(20);
+                    Console.Write("İ");
+                    Thread.Sleep(20);
+                    Console.Write("ş");
+                    Thread.Sleep(20);
+                    Console.Write("l");
+                    Thread.Sleep(20);
+                    Console.Write("e");
+                    Thread.Sleep(20);
+                    Console.Write("n");
+                    Thread.Sleep(20);
+                    Console.Write("d");
+                    Thread.Sleep(20);
+                    Console.Write("i.");
+
+
+
+                }
+            }
+            //Console.WriteLine();
+            //Console.Write("\n"+"\t\t" + "Kazandığınız Tur Başına {1}$ , Kaybettiğiniz Tur Başına {0}$ Hesabınıza İşlendi.",bahis,bahiskari);
+            Console.Read();
+        }
+    }
+}
