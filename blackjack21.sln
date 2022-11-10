@@ -9,7 +9,7 @@ namespace blackjack21
             Console.Title = "21 BLACKJACK";
             Console.BackgroundColor=ConsoleColor.Cyan; Console.Clear();
             Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+            //Console.WriteLine("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
             Console.WriteLine();
             Thread.Sleep(1000);
             Console.Write("\t\t\t\t\t" + "     B");
@@ -60,13 +60,13 @@ namespace blackjack21
             Console.WriteLine();
 
             Console.WriteLine("\t\t\t\t" + "  Seçtiğiniz Miktarda 5 Tur Oynayacaksınız");
-            Console.WriteLine("\t\t\t\t" + "  Kazandığınız Tur Başına Bahisinizin 1.5 Katı," );
+            Console.WriteLine("\t\t\t\t" + "  Kazandığınız Tur Başına Bahisinizin 2 Katı," );
             Console.WriteLine("\t\t\t\t" + "  Kaybettiğiniz Tur Başına Bahis Miktarı Hesapta İşlenir");
             Console.WriteLine("\t\t\t\t" + "  Tur Berabere İse Paranız Geri Ödenir.");
             Console.WriteLine("\t\t\t\t" + "  Kart Sayı Toplamlarınız 21'i Geçerse Turu Kaybedersiniz." );
             Console.WriteLine("\t\t\t\t" + "  Kart Adetiniz 5 Olursa Otomatik Olarak Turu Kazanırsınız.");
             Console.WriteLine("\t\t\t\t" + "  El Sonunda Kart Sayılarının Toplamı 21'E Yakın Olan Kazanır." +"\n");
-            Console.WriteLine("\t\t\t\t" + "                 Devam İçin Enter."+"\n");
+            Console.WriteLine("\t\t\t\t\t" + "     Başlamak İçin Enter'a Basınız" + "\n");
 
             Random rnd = new Random();
             int el1 = rnd.Next(1, 11);
@@ -80,12 +80,37 @@ namespace blackjack21
             //Console.Write("  İsim : ");
             //string isim = Convert.ToString(Console.ReadLine());
             Console.WriteLine();
-            Console.Write("  Bahis Miktarı : ");
+
+            //Console.Write("  Bahis Miktarı : ");
+            Thread.Sleep(65);
+            Console.Write("  B");
+            Thread.Sleep(65);
+            Console.Write("a");
+            Thread.Sleep(65);
+            Console.Write("h");
+            Thread.Sleep(65);
+            Console.Write("i");
+            Thread.Sleep(65);
+            Console.Write("s");
+            Thread.Sleep(65);
+            Console.Write(" ");
+            Thread.Sleep(65);
+            Console.Write("M");
+            Thread.Sleep(65);
+            Console.Write("i");
+            Thread.Sleep(65);
+            Console.Write("k");
+            Thread.Sleep(65);
+            Console.Write("t");
+            Thread.Sleep(65);
+            Console.Write("a");
+            Thread.Sleep(65);
+            Console.Write("r");
+            Thread.Sleep(65);
+            Console.Write("ı : ");
             int bahis = Convert.ToInt32(Console.ReadLine());
-            int bahiskari = bahis / 2 + bahis;
+            int bahiskari = bahis * 2;
             Console.WriteLine();
-            Console.WriteLine("\t\t\t\t\t" + "     Başlamak İçin Entera Basınız" + "\n");
-            Console.ReadLine();
 
             Console.Write("  Oyun Yükleniyor ");
 
@@ -177,7 +202,7 @@ namespace blackjack21
                             Thread.Sleep(1000);
                             Console.Write(kasakapali + "\n");
                             int kasatoplamx = kasa1 + kasakapali;
-                            if (kasatoplamx == eltoplam)
+                            if (kasatoplamx == eltoplamxx)
                             {
                                 Console.Write("  Tur Berabere" + "\n");
                                 tur++;
@@ -187,12 +212,12 @@ namespace blackjack21
                                 Console.Write("  Oyuncu Kazandı" + "\n");
                                 tur++;
                             }
-                            else if (kasatoplamx < 21 && kasatoplamx > eltoplam)
+                            else if (kasatoplamx < 21 && kasatoplamx > eltoplamxx)
                             {
                                 Console.Write("  Kasa Kazandı" + "\n");
                                 tur++;
                             }
-                            if (kasatoplamx < 21 && kasatoplamx < eltoplam)
+                            if (kasatoplamx < 21 && kasatoplamx < eltoplamxx)
                             {
                                 Thread.Sleep(700);
                                 Console.Write("  Kasanın 3. Kartı = ");
@@ -209,17 +234,17 @@ namespace blackjack21
                                     Console.Write("  Kasa Kazandı" + "\n");
                                     tur++;
                                 }
-                                else if (kasatoplamx2 < 21 && kasatoplamx2 > eltoplam)
+                                else if (kasatoplamx2 < 21 && kasatoplamx2 > eltoplamxx)
                                 {
                                     Console.Write("  Kasa Kazandı" + "\n");
                                     tur++;
                                 }
-                                else if (kasatoplamx2 == eltoplam)
+                                else if (kasatoplamx2 == eltoplamxx)
                                 {
                                     Console.Write("  Tur Berabere" + "\n");
                                     tur++;
                                 }
-                                if (kasatoplamx2 < 21 && kasatoplamx2 < eltoplam)
+                                if (kasatoplamx2 < 21 && kasatoplamx2 < eltoplamxx)
                                 {
                                     int kasax3 = rnd.Next(1, 11);
                                     Console.Write("  Kasanın 4. Kartı = ");
@@ -235,17 +260,17 @@ namespace blackjack21
                                         Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamx3 == eltoplam)
+                                    if (kasatoplamx3 == eltoplamxx)
                                     {
                                         Console.Write("  Tur Berabere" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamx3 < 21 && kasatoplamx3 > eltoplam)
+                                    if (kasatoplamx3 < 21 && kasatoplamx3 > eltoplamxx)
                                     {
                                         Console.Write("  Kasa Kazandı" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamx3 < 21 && kasatoplamx3 < eltoplam)
+                                    if (kasatoplamx3 < 21 && kasatoplamx3 < eltoplamxx)
                                     {
                                         int kasa4 = rnd.Next(1, 11);
                                         Console.Write("  Kasanın 5. Kartı = ");
@@ -585,7 +610,7 @@ namespace blackjack21
                 int elxx1 = rnd.Next(1, 11);
                 int elxx2 = rnd.Next(1, 11);
                 int elxx3 = rnd.Next(1, 11);
-                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+                int eltoplamxxx;
 
                 Thread.Sleep(1000);
                 Console.WriteLine();
@@ -863,16 +888,11 @@ namespace blackjack21
                                                 {
                                                     Console.WriteLine("  Kasa Kazandı" + "\n"); tur++;
                                                 }
-                                                if (kasatoplamxx4 < 21 && kasatoplamxx4 > eltoplamxx4)
-                                                {
-                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
-
-                                                }
-                                                if (kasatoplamxx4 == 21)
+                                                else if (kasatoplamxx4 == 21)
                                                 {
                                                     Console.Write(" Kasa Kazandı" + "\n"); tur++;
                                                 }
-                                                if (kasatoplamxx4 > 21)
+                                                else if (kasatoplamxx4 > 21)
                                                 {
                                                     Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
 
@@ -1047,7 +1067,7 @@ namespace blackjack21
                 int elxx1 = rnd.Next(1, 11);
                 int elxx2 = rnd.Next(1, 11);
                 int elxx3 = rnd.Next(1, 11);
-                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+                int eltoplamxxx;
 
                 Thread.Sleep(1000);
                 Console.WriteLine();
@@ -1231,13 +1251,17 @@ namespace blackjack21
                                     int eltoplamxx5 = elxx1 + elxx2 + elxx3 + elxx4 + elxx5;
                                     if (eltoplamxx5 > 21)
                                     {
-                                        Console.Write("  Kasa Kazandı");
+                                        Console.Write("  Kasa Kazandı"+"\n");
                                         tur++;
                                     }
-                                    if (eltoplamxx5 < 21)
+                                    else if (eltoplamxx5 < 21)
                                     {
-                                        Console.Write("  Oyuncu Kazandı");
+                                        Console.Write("  Oyuncu Kazandı"+"\n");
                                         tur++;
+                                    }
+                                    else if (eltoplamxx5 == 21)
+                                    {
+                                        Console.WriteLine("  Oyuncu Kazandı"+"\n");
                                     }
                                 }
                                 if (kararxx22 == 0)
@@ -1323,11 +1347,11 @@ namespace blackjack21
                                                     Console.Write(" Kasa Kazandı" + "\n"); tur++;
 
                                                 }
-                                                if (kasatoplamxx4 == 21)
+                                                else if (kasatoplamxx4 == 21)
                                                 {
                                                     Console.Write(" Kasa Kazandı" + "\n"); tur++;
                                                 }
-                                                if (kasatoplamxx4 > 21)
+                                                else if (kasatoplamxx4 > 21)
                                                 {
                                                     Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
 
@@ -1437,10 +1461,14 @@ namespace blackjack21
                                     Thread.Sleep(1000);
                                     Console.Write(kasaxx5 + "\n");
                                     int kasatoplamx4 = kasaxx1 + kasakapalixx + kasa3xx + kasaxx5 + kasaxx4;
-                                    if (kasatoplamx4 < 21 || kasatoplamx4 == 21)
+                                    if (kasatoplamx4 < 21)
                                     {
                                         Console.Write(" Kasa Kazandı" + "\n"); tur++;
 
+                                    }
+                                    else if (kasatoplamx4 == 21)
+                                    {
+                                        Console.WriteLine("  Kasa Kazandı" + "\n");
                                     }
                                     else if (kasatoplamx4 > eltoplamxxx && kasatoplamx4 < 21)
                                     {
@@ -1493,7 +1521,7 @@ namespace blackjack21
                 int elxx1 = rnd.Next(1, 11);
                 int elxx2 = rnd.Next(1, 11);
                 int elxx3 = rnd.Next(1, 11);
-                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+                int eltoplamxxx;
 
                 Thread.Sleep(1000);
                 Console.WriteLine();
@@ -1600,17 +1628,17 @@ namespace blackjack21
                                         Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamxxx3 == eltoplam)
+                                    if (kasatoplamxxx3 == eltoplamxxx)
                                     {
                                         Console.Write("  Tur Berabere" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplam)
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplamxxx)
                                     {
                                         Console.Write("  Kasa Kazandı" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplam)
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplamxxx)
                                     {
                                         int kasaxx4 = rnd.Next(1, 11);
                                         Thread.Sleep(700);
@@ -1671,12 +1699,16 @@ namespace blackjack21
                                     int eltoplamxx5 = elxx1 + elxx2 + elxx3 + elxx4 + elxx5;
                                     if (eltoplamxx5 > 21)
                                     {
-                                        Console.Write("  Kasa Kazandı");
+                                        Console.Write("  Kasa Kazandı"+"\n");
                                         tur++;
                                     }
-                                    if (eltoplamxx5 < 21)
+                                    else if (eltoplamxx5 == 21)
                                     {
-                                        Console.Write("  Oyuncu Kazandı");
+                                        Console.WriteLine("  Oyuncu Kazandı"+"\n");
+                                    }
+                                    else if (eltoplamxx5 < 21)
+                                    {
+                                        Console.Write("  Oyuncu Kazandı"+"\n");
                                         tur++;
                                     }
                                 }
@@ -1753,16 +1785,16 @@ namespace blackjack21
                                                 Thread.Sleep(700);
                                                 Console.Write(kasaxxx3 + "\n");
                                                 int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3 + kasaxxx4;
-                                                if (kasatoplamxx4 < 21 && kasatoplamxx4 > eltoplamxx4 || kasatoplamxx4 == 21)
+                                                if (kasatoplamxx4 < 21)
                                                 {
                                                     Console.Write(" Kasa Kazandı" + "\n"); tur++;
 
                                                 }
-                                                if (kasatoplamxx4 == 21)
+                                                else if (kasatoplamxx4 == 21)
                                                 {
                                                     Console.Write(" Kasa Kazandı" + "\n"); tur++;
                                                 }
-                                                if (kasatoplamxx4 > 21)
+                                                else if (kasatoplamxx4 > 21)
                                                 {
                                                     Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
 
@@ -1866,14 +1898,18 @@ namespace blackjack21
                                     Thread.Sleep(1000);
                                     Console.Write(kasaxx5 + "\n");
                                     int kasatoplamx4 = kasaxx1 + kasakapalixx + kasa3xx + kasaxx5 + kasaxx4;
-                                    if (kasatoplamx4 < 21 || kasatoplamx4 == 21)
+                                    if (kasatoplamx4 < 21)
                                     {
-                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
 
+                                    }
+                                    else if (kasatoplamx4 == 21)
+                                    {
+                                        Console.WriteLine("  Kasa Kazandı"+"\n");
                                     }
                                     else if (kasatoplamx4 > eltoplamxxx && kasatoplamx4 < 21)
                                     {
-                                        Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                        Console.Write("  Kasa Kazandı" + "\n"); tur++;
 
                                     }
                                     else if (kasatoplamx4 > 21)
@@ -1920,7 +1956,7 @@ namespace blackjack21
                 int elxx1 = rnd.Next(1, 11);
                 int elxx2 = rnd.Next(1, 11);
                 int elxx3 = rnd.Next(1, 11);
-                int eltoplamxxx = elxx1 + elxx2 + elxx3;
+                int eltoplamxxx;
 
                 Thread.Sleep(1000);
                 Console.WriteLine();
@@ -2033,17 +2069,17 @@ namespace blackjack21
                                         Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamxxx3 == eltoplam)
+                                    if (kasatoplamxxx3 == eltoplamxxx)
                                     {
                                         Console.Write("  Tur Berabere" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplam)
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 > eltoplamxxx)
                                     {
                                         Console.Write("  Kasa Kazandı" + "\n"); tur++;
 
                                     }
-                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplam)
+                                    if (kasatoplamxxx3 < 21 && kasatoplamxxx3 < eltoplamxxx)
                                     {
                                         int kasaxx4 = rnd.Next(1, 11);
                                         Thread.Sleep(700);
@@ -2106,7 +2142,11 @@ namespace blackjack21
                                         Console.Write("  Kasa Kazandı"+"\n");
                                         tur++;
                                     }
-                                    if (eltoplamxx5 < 21)
+                                    else if (eltoplamxx5 == 21)
+                                    {
+                                        Console.WriteLine("  Oyuncu Kazandı"+"\n");
+                                    }
+                                    else if (eltoplamxx5 < 21)
                                     {
                                         Console.Write("  Oyuncu Kazandı"+"\n");
                                         tur++;
@@ -2190,16 +2230,16 @@ namespace blackjack21
                                                 Thread.Sleep(700);
                                                 Console.Write(kasaxxx3 + "\n");
                                                 int kasatoplamxx4 = kasaxx1 + kasakapalixx + kasa2xx + kasaxxx3 + kasaxxx4;
-                                                if (kasatoplamxx4 < 21 && kasatoplamxx4 > eltoplamxx4 || kasatoplamxx4 == 21)
+                                                if (kasatoplamxx4 < 21)
                                                 {
-                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                                    Console.Write("  Kasa Kazandı" + "\n"); tur++;
 
                                                 }
-                                                if (kasatoplamxx4 == 21)
+                                                else if (kasatoplamxx4 == 21)
                                                 {
-                                                    Console.Write(" Kasa Kazandı" + "\n"); tur++;
+                                                    Console.Write("  Kasa Kazandı" + "\n"); tur++;
                                                 }
-                                                if (kasatoplamxx4 > 21)
+                                                else if (kasatoplamxx4 > 21)
                                                 {
                                                     Console.Write("  Oyuncu Kazandı" + "\n"); tur++;
 
